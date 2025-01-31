@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'bottom_nav_bar/ids_floating_action_button.dart';
+import 'package:ids_material_sdk/bottom_nav_bar/index.dart';
 import 'task_page.dart'; // Assuming TaskPage exists
 import 'demo_page.dart'; // Assuming DemoPage exists
 import 'home_page.dart'; // Assuming HomePage exists
-import 'bottom_nav_bar/ids_bottom_bar_item.dart';
-import 'bottom_nav_bar/ids_bottom_navigation_bar.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,6 +21,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -64,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
           isSelected: false,
           activeColor: Colors.blue,
           inactiveColor: Colors.amber,
-          icon: Icons.add,
+          icon: Icon(Icons.add),
           enableShadow: true,
         ),
       ),
@@ -100,6 +102,11 @@ class _HomeScreenState extends State<HomeScreen> {
         activeColor: Colors.blue,
         inActiveColor: Colors.grey,
         enableMiddleTabItem: true, // Enable middle tab and FAB
+        enableTopShadow: true, // enable the top shadow of bottom bar
+        blurRadius: 2.0,
+        spreadRadius: 0.2,
+        offset: -2,
+        shadowColor: Colors.black12,
         onTabSelected: (index) {
           print("Selected index: $index");
           setState(() {

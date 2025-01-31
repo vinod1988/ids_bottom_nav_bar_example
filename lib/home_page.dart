@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'bottom_nav_bar/ids_bottom_navigation_bar.dart';
+import 'package:ids_material_sdk/bottom_nav_bar/index.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   GlobalKey<IDSBottomNavigationAppBarState>();
 
 
-  List<Map<String, dynamic>> _tasks = [
+  final List<Map<String, dynamic>> _tasks = [
     {"title": "Complete Flutter Project", "completed": false},
     {"title": "Read Documentation", "completed": false},
     {"title": "Fix UI Bugs", "completed": false},
@@ -48,7 +47,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(10.0),
             child: Row(
               children: [
                 Expanded(
