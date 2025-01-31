@@ -5,9 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 ## Use this package as a library
-![Project Logo](assets/demo/logo.png)
-- **Width:** [100] px
-- **Height:** [100] px
+<img src="assets/demo/logo.png" alt="Project Logo" width="100" height="80">
 
 https://pub.dev/packages/ids_material_sdk/install
 
